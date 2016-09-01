@@ -1,0 +1,23 @@
+{
+  "name": "yahtzee-game-machine",
+  "version": "0.0.1",
+  "description": "simulator for playing yahtzee",
+  "main": "index.js",
+  "dependencies": {
+    "cli": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msteinbergtx/yahtzee-game-machine.git"
+  },
+  "author": "msteinbergtx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msteinbergtx/yahtzee-game-machine/issues"
+  },
+  "homepage": "https://github.com/msteinbergtx/yahtzee-game-machine#readme"
+}
