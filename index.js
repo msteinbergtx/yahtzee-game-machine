@@ -5,8 +5,22 @@ function getRandomIntInclusive(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-console.log('hello world!');
-low = 1;
-high = 6;
-thisRoll = getRandomIntInclusive(1,6);
-console.log(thisRoll);
+
+
+function rollDice(){
+var low = 1;
+var high = 6;
+var numRolls = 5;
+var theRolls = [];
+var i;
+
+  for (i=0; i<numRolls; i++){
+    theRolls.push(getRandomIntInclusive(low,high));
+  }
+
+  for (i=0; i<numRolls; i++){
+    console.log(theRolls[i]);
+  }
+}
+
+rollDice();
