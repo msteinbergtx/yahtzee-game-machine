@@ -53,26 +53,52 @@ var i;
 
 }
 
-console.log("initializing dice");
-initDice();
-printDice();
+function isYahtzee(){
+  return !!theDice.reduce(function(a, b){ return (a === b) ? a : NaN; });
+}
 
-console.log("rolling first pass...");
-rollDice();
-printDice();
+function playTurn(){
+  console.log("initializing dice");
+  initDice();
+  printDice();
+  
+  console.log("rolling first pass...");
+  rollDice();
+  printDice();
+  
+  // theDice[0] = 5;
+  // theDice[1] = 5;
+  // theDice[2] = 5;
+  // theDice[3] = 5;
+  // theDice[4] = 5;
+  
+  if (isYahtzee()) {
+    console.log("Yahtzee!");
+  } else {
+      console.log("selecting...");
+      selectDice();
+      printDice();
+      
+      console.log("rolling second pass...");
+      rollDice();
+      printDice();
+      
+      if (isYahtzee()) {
+        console.log("Yahtzee!");
+      } else {
+        console.log("selecting...");
+        selectDice();
+        printDice();
+        
+        if (isYahtzee()) {
+          console.log("Yahtzee!");
+        } else {
+          console.log("rolling third pass...");
+          rollDice();
+          printDice();
+        }
+      }
+  }
+}
 
-console.log("selecting...");
-selectDice();
-printDice();
-
-console.log("rolling second pass...");
-rollDice();
-printDice();
-
-console.log("selecting...");
-selectDice();
-printDice();
-
-console.log("rolling third pass...");
-rollDice();
-printDice();
+playTurn();
